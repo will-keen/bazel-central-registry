@@ -273,7 +273,6 @@ cc_library(
         "include/verilated_random.cpp",
         "include/verilated_saif_c.cpp",
         "include/verilated_save.cpp",
-        "include/verilated_timing.cpp",
         "include/verilated_vcd_sc.cpp",
     ],
     hdrs = [
@@ -295,7 +294,6 @@ cc_library(
         "include/verilated_sc.h",
         "include/verilated_sym_props.h",
         "include/verilated_threads.h",
-        "include/verilated_timing.h",
         # Needed for verilated_vcd_c.cpp and verilated_fst_c.cpp
         "include/verilated_trace_imp.h",
         "include/verilated_trace.h",
@@ -376,6 +374,22 @@ cc_binary(
     }),
     visibility = ["//visibility:public"],
     deps = [":verilator_libV3"],
+)
+
+# When invoked with --hierarchical, verilator expects a binary to exist
+# from the directory it was called from named "verilator". With the existing
+# rules, this file is called "verilator_bin". So to maintain backwards-compatibility,
+# we add a symlink.
+genrule(
+    name = "verilator_symlink",
+    srcs = [":verilator_bin"],
+    outs = ["verilator"],
+    cmd = select({
+        "@platforms//os:windows": "copy $(location :verilator_bin) $@",
+        "//conditions:default": "ln -sf $$(basename $(location :verilator_bin)) $@",
+    }),
+    executable = True,
+    visibility = ["//visibility:public"],
 )
 
 alias(
