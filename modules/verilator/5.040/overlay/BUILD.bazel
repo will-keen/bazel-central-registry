@@ -376,22 +376,6 @@ cc_binary(
     deps = [":verilator_libV3"],
 )
 
-# When invoked with --hierarchical, verilator expects a binary to exist
-# from the directory it was called from named "verilator". With the existing
-# rules, this file is called "verilator_bin". So to maintain backwards-compatibility,
-# we add a symlink.
-genrule(
-    name = "verilator_symlink",
-    srcs = [":verilator_bin"],
-    outs = ["verilator"],
-    cmd = select({
-        "@platforms//os:windows": "copy $(location :verilator_bin) $@",
-        "//conditions:default": "ln -sf $$(basename $(location :verilator_bin)) $@",
-    }),
-    executable = True,
-    visibility = ["//visibility:public"],
-)
-
 alias(
     name = "verilator_executable",
     actual = ":verilator_bin",
