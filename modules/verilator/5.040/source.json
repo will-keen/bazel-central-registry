@@ -16,6 +16,7 @@
         "private/verilator_version.py": "sha256-GOQW7JAmkikFKdk7KzNQOiAt8Wk2WZvpC6V2UdLV36U="
     },
     "patches": {
-        "v3hash_ambiguous.patch": "sha256-gtkBNcbioYCkLaUiYcC0WnCNNBFseVdLyg7GCZqHP4M="
+        "v3hash_ambiguous.patch": "sha256-gtkBNcbioYCkLaUiYcC0WnCNNBFseVdLyg7GCZqHP4M=",
+        "hierarchical_binary_name.patch": "sha256-olaBXVW1x+BdB6pBcJB7itxQMET9GcBBhR6f7Q6hPqY="
     }
 }
