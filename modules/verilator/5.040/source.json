@@ -5,7 +5,7 @@
     "patch_strip": 1,
     "overlay": {
         ".bazelignore": "sha256-4Yz6+7DIt5CedRfM7s3dxN7HstNIP9KBMBXro1MaVu0=",
-        "BUILD.bazel": "sha256-L3+SGpOthVmd2fqlXbQhzlfUQiwC8S5Xfx/E/ZC5QIk=",
+        "BUILD.bazel": "sha256-iPDb4Az3aVC9bxVE1ovXRp2D6hD/MYWSbqrq9TWX+EM=",
         "MODULE.bazel": "sha256-VzN4w9xBKJ7BfHcjhO3ib+EhOUIxlcDrD4l7zmtUHso=",
         "private/BUILD.bazel": "sha256-um1vB3qYV9jNLMhTue172PCrJbZf/4Nc9gFiwpXqWYY=",
         "private/verilator_astgen.py": "sha256-aBHwsUzSKEEEseMUDdXS2XTT8X0jHfAJw7Yu8qvKqPA=",
