@@ -2,9 +2,10 @@
     "url": "https://github.com/verilator/verilator/archive/refs/tags/v5.040.tar.gz",
     "integrity": "sha256-VsfEYxSt+tBt0JO3eCO/2bSevvcjQlSfeQcYGZw+giM=",
     "strip_prefix": "verilator-5.040",
+    "patch_strip": 1,
     "overlay": {
         ".bazelignore": "sha256-4Yz6+7DIt5CedRfM7s3dxN7HstNIP9KBMBXro1MaVu0=",
-        "BUILD.bazel": "sha256-XEGUncCHkBW91G+f74qZxFtVCSQGMmCFQOTjX3tqGLk=",
+        "BUILD.bazel": "sha256-L3+SGpOthVmd2fqlXbQhzlfUQiwC8S5Xfx/E/ZC5QIk=",
         "MODULE.bazel": "sha256-VzN4w9xBKJ7BfHcjhO3ib+EhOUIxlcDrD4l7zmtUHso=",
         "private/BUILD.bazel": "sha256-um1vB3qYV9jNLMhTue172PCrJbZf/4Nc9gFiwpXqWYY=",
         "private/verilator_astgen.py": "sha256-aBHwsUzSKEEEseMUDdXS2XTT8X0jHfAJw7Yu8qvKqPA=",
@@ -13,5 +14,8 @@
         "private/verilator_flexfix.py": "sha256-eMDxDSMiytb//P2Ej8KfCTwsblf+/WEsGa1gk2GkfK8=",
         "private/verilator_utils.bzl": "sha256-0nDLkhOTQfvlyjg+B57KXhru4e2unIBOr87YcCbCzq8=",
         "private/verilator_version.py": "sha256-GOQW7JAmkikFKdk7KzNQOiAt8Wk2WZvpC6V2UdLV36U="
+    },
+    "patches": {
+        "v3hash_ambiguous.patch": "sha256-gtkBNcbioYCkLaUiYcC0WnCNNBFseVdLyg7GCZqHP4M="
     }
 }
